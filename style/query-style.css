@@ -1,0 +1,29 @@
+input {
+  width: 300px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  display: flex;
+  border: none;
+  outline: none;
+  flex-direction: column;
+}
+
+body {
+  background-color: rgb(124, 124, 228);
+}
+
+h2 {
+  color: white;
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+}
+
+input::placeholder {
+  font-size: 20px;
+}

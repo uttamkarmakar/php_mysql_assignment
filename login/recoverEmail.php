@@ -1,3 +1,4 @@
+<!-- Html section for the recover account part -->
 <!doctype html>
 <html lang="en">
 

@@ -6,14 +6,13 @@ var conmsg = document.getElementById("conpass");
 var username = document.getElementById("user");
 var namemsg = document.getElementById("namemsg");
 
+//Validating strength of password.
 pass.addEventListener('input', () => {
   if (pass.value.length > 0) {
     msg.style.display = "block";
   } else {
     msg.style.display = "none";
   }
-
-
   if (pass.value.length < 4) {
     str.innerHTML = " weak x";
     pass.style.borderColor = "#ff5925";
@@ -30,6 +29,7 @@ pass.addEventListener('input', () => {
 
 });
 
+//Validating username with javascript,will show error if the name is less than 2 alphabets long.
 username.addEventListener('keydown', () => {
   if (username.value.length < 1) {
     namemsg.style.display = "block";
@@ -41,7 +41,7 @@ username.addEventListener('keydown', () => {
     namemsg.innerHTML = "**Name should be atleast 2 alphabets long";
   }
 });
-
+//Checking if the password and the confirm password fields are matching or not.
 function checkPasswordMatch() {
   var password = $("#pass").val();
   var confirmPassword = $("#cpass").val();

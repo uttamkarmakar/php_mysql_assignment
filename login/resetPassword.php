@@ -5,22 +5,25 @@
   session_start();
   include '../database/Connections.php';
   include '../database/UserRegistration.php';
-  // $resetObj = new GetConnection;
+  
 if (isset($_POST['update'])) {
 
   if (isset($_GET['token'])) {
     $obj = new UserRegistration;
     $token = $_GET['token'];
-
+    //First checking if the user is entering a valid password or not.
     if ($obj->isValidPass(($_POST["newpassword"])) === TRUE) {
       $newpassword = mysqli_real_escape_string($conn, $_POST["newpassword"]);
       $cpassword = mysqli_real_escape_string($conn, ($_POST["cpassword"]));
-
+      
+      //If the new password and the confirm password matches then update the new password into the database.
+      
       if ($newpassword === $cpassword) {
         $updateQuery = "update " . UserRegistration::TABLE_NAME . " set userPassword='$newpassword' where token='$token';";
         $query = mysqli_query($conn, $updateQuery);
 
         if ($query) {
+          //If the password successfully updated into the database then redirect to the login page with a message
           $_SESSION["loginMessage"] = "Your password has been updated,Login with new password";
           header("Location:login.php");
         } else {
@@ -90,4 +93,3 @@ if (isset($_POST['update'])) {
 </body>
 
 </html>
-j

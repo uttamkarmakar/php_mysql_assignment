@@ -1,3 +1,4 @@
+<!-- Html for Registration page   -->
 <!doctype html>
 <html lang="en">
 

@@ -3,10 +3,9 @@
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
 
-
   require "../vendor/autoload.php";
   use PHPMailer\PHPMailer\PHPMailer;
-
+//Sending mail from the user if he/she wants to reset password.
 if (isset($_POST['send'])) {
   
   // require "../database/database.php";

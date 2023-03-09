@@ -1,4 +1,5 @@
 <?php
+  //Connection details
   $hostName = "localhost";
   $userName = "root";
   $userPass = "Kunal123";

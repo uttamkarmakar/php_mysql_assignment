@@ -1,3 +1,4 @@
+<!-- Html structure for login page -->
 <!doctype html>
 <html lang="en">
 
@@ -11,6 +12,7 @@
   <link rel="stylesheet" href="../style/login-style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="../jquery/login.js"></script>
+  <link rel="stylesheet" href="../style/previewstyle.css">
   <title>Login/Sign Up</title>
 </head>
 
@@ -45,9 +47,9 @@
           </div>
           <div class="form-group row">
             <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-            <div class="col-sm-10">
-              <input type="password" class="form-control" name="pass" id="inputPassword3" placeholder="Password" required ><span><i class="fa-sharp fa-solid fa-eye show" onclick="show_pass()"></i></span>
-
+            <div class="col-sm-10" id="password-field">
+              <input type="password" class="form-control" name="pass" id="inputPassword3" placeholder="Password" required >
+              <span class="preview"><i class="fa-sharp fa-solid fa-eye show" onclick="show_pass()"></i></span>
             </div>
           </div>
           <div class="loginErr">
